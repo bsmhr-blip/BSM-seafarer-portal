@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BSM Helm for Crew</title>
+<script>
+  // Send any wrong link back to the prototype home (works for project and user Pages sites).
+  (function () {
+    var seg = location.pathname.split('/')[1];
+    var isProject = location.hostname.indexOf('github.io') > -1 && seg && seg.indexOf('.') === -1;
+    location.replace(isProject ? '/' + seg + '/' : '/');
+  })();
+</script>
+</head>
+<body style="font-family:system-ui,sans-serif;background:#0B1626;color:#EAF1FA;padding:24px">
+<p>Taking you to BSM Helm for Crew… <a href="./" style="color:#7FB8FF">Open the prototype</a></p>
+</body>
+</html>
