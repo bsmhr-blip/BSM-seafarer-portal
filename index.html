@@ -245,6 +245,58 @@ footer .wrap{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
+/* ---------- v9 Social Feed ---------- */
+.sf-bar{display:flex;align-items:center;gap:8px}
+.sf-views{flex:1;display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.sf-views button{border:0;background:transparent;color:var(--ink-2);padding:8px 0;cursor:pointer;border-bottom:2px solid transparent;display:flex;justify-content:center}
+.sf-views button.on{color:var(--accent);border-bottom-color:var(--accent)}
+.sf-sort{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.sf-sort button{border:0;background:transparent;color:var(--ink-2);padding:8px 0;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;border-bottom:2px solid transparent}
+.sf-sort button.on{color:var(--accent);border-bottom-color:var(--accent)}
+.sf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;margin:0 -16px}
+.sf-grid.gal{margin:0}
+.sf-th{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--ov-2)}
+.sf-thb{position:relative;display:block;width:100%;height:100%;border:0;padding:0;background:transparent;cursor:pointer}
+.sf-img{display:block;width:100%;height:100%}
+.sf-img.blur{filter:blur(7px) saturate(.6);transform:scale(1.1)}
+.sf-dl{position:absolute;inset:0;margin:auto;width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;display:flex;align-items:center;justify-content:center}
+.sf-dl.big{width:56px;height:56px}
+.sf-cnt{position:absolute;left:4px;bottom:4px;display:flex;align-items:center;gap:3px;font-size:10px;font-weight:700;color:#fff;background:rgba(0,0,0,.45);padding:2px 5px;border-radius:6px}
+.sf-mdl{position:absolute;right:4px;top:4px;width:26px;height:26px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sf-th.sel .sf-img{opacity:.55}
+.sf-check{position:absolute;right:6px;top:6px;width:22px;height:22px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px #fff}
+.sf-flag{position:absolute;left:4px;top:4px;font-size:9px;font-weight:800;background:#C3271E;color:#fff;padding:1px 5px;border-radius:5px}
+.sf-card{background:var(--surface);border-radius:16px;box-shadow:var(--card-shadow);overflow:hidden;display:flex;flex-direction:column}
+.sf-head{display:flex;align-items:center;gap:8px;padding:10px 6px 10px 12px}
+.sf-name{font-weight:700;font-size:13.5px}
+.sf-dots{margin-left:auto;background:transparent}
+.sf-photo{display:block;position:relative;width:100%;aspect-ratio:1/1;border:0;padding:0;overflow:hidden;background:var(--ov-2);cursor:pointer}
+.sf-acts{display:flex;align-items:center;gap:2px;padding:6px 8px 0}
+.sf-like{border:0;background:transparent;color:var(--ink-2);width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sf-like.sm{width:30px;height:30px}
+.sf-like.on{color:#1D63C7}
+.sf-like.on svg path{fill:currentColor}
+[data-theme="dark"] .sf-like.on{color:#5AA9FF}
+.sf-n{border:0;background:transparent;color:var(--ink);font-weight:700;font-size:13px;cursor:pointer;padding:4px 6px 4px 0;font-family:inherit}
+.sf-age{margin-left:auto;font-size:11.5px;color:var(--ink-2);padding-right:6px}
+.sf-cap{margin:4px 14px 2px;font-size:13px;line-height:1.45}
+.sf-more{border:0;background:transparent;color:var(--ink-2);cursor:pointer;padding:0;font-family:inherit;font-size:13px}
+.sf-vc{border:0;background:transparent;color:var(--ink-2);text-align:left;padding:2px 14px;font-size:12.5px;cursor:pointer;font-family:inherit}
+.sf-add{display:flex;align-items:center;gap:8px;border:0;border-top:1px solid var(--line);margin-top:8px;background:transparent;color:var(--ink-2);padding:10px 14px;cursor:pointer;font-family:inherit;font-size:13px;text-align:left}
+.sf-role{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;vertical-align:middle;flex-shrink:0}
+.sf-role.seafarer{background:#DCEBFF;color:#1D63C7}
+.sf-role.office{background:#EBDDFF;color:#6B3FD1}
+.sf-av{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0}
+.sf-av.seafarer{background:#DCEBFF;color:#1D63C7}
+.sf-av.office{background:#EBDDFF;color:#6B3FD1}
+.sf-fab{position:sticky;bottom:8px;align-self:flex-end;width:56px;height:56px;border-radius:50%;border:0;background:var(--accent);color:var(--on-accent);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3);margin-top:-64px}
+.sf-me{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;color:#fff;background:linear-gradient(135deg,#1D4F8F,#6B3FD1)}
+.sf-sel{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--ov-2)}
+.sf-exp{position:absolute;right:8px;bottom:8px;width:32px;height:32px;border-radius:8px;border:0;background:rgba(0,0,0,.55);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sf-cam{position:sticky;bottom:8px;align-self:center;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3);margin-top:-66px}
+.sf-cm{display:flex;gap:8px;align-items:flex-start}
+.sf-mini{border:0;background:transparent;color:var(--ink-2);cursor:pointer;padding:0;font-family:inherit;font-size:12px;display:inline-flex;align-items:center;gap:4px}
+.sf-cin{display:flex;align-items:center;gap:8px}
 /* ---------- v7 additions ---------- */
 .tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 6px}
 .tile{display:flex;flex-direction:column;align-items:center;gap:6px;border:0;background:transparent;color:var(--ink);cursor:pointer;font-family:inherit;padding:2px;min-height:64px}
@@ -367,7 +419,7 @@ select.inp{appearance:auto}
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
       <div>
-        <span class="eyebrow">BSM HELM FOR CREW · PROTOTYPE v8</span>
+        <span class="eyebrow">BSM HELM FOR CREW · PROTOTYPE v9</span>
         <h1 id="hero-title">Open the app. See what <em>needs you now.</em></h1>
         <p class="lead">Helm replaces the seafarer portal with an action-first home: documents about to expire, a vessel plan to answer, your next flight and course, alerts to read. Everything you only need now and then — payslips, allotments, downloads, profile — sits one tap away in a tidy menu.</p>
         <div class="cta">
@@ -805,7 +857,7 @@ select.inp{appearance:auto}
     if (p[0] === 'menu') { tab('menu'); return; }
     if (p[0] === 'tab') { tab(p[1]); return; }
     if (p[0] === 'act') { S.sheet = 'qa'; return; }
-    if (p[0] === 'open') { go(p[1], p.length > 2 ? p.slice(2).join(':') : null); return; }
+    if (p[0] === 'open') { go(p[1], p.length > 2 ? p.slice(2).join(':') : null); if (p[1] === 'social') sfOpen(); return; }
   }
 
   /* ================= Derived ================= */
@@ -1201,6 +1253,7 @@ select.inp{appearance:auto}
   function menu() {
     var h = '<div class="h-title">Menu</div><span class="muted small">Everything not already on Home, News, Voyage or your profile.</span>';
     h += '<b class="small muted gh">WORK &amp; LEARNING</b>' + tiles([tile('training', I.training, 'var(--warn)', 'Training'), tile('cms', I.cms, 'var(--link)', 'CMS', CMS.filter(function (m) { return m.status === 'due'; }).length), tile('feedback', I.star, 'var(--warn)', 'Feedback', badge('fb')), tile('fx', I.fx, 'var(--good)', 'Currency')]);
+    h += '<b class="small muted gh">COMMUNITY</b>' + tiles([tile('social', I.social, 'var(--accent)', 'Social Feed')]);
     h += '<b class="small muted gh">HELP</b>' + tiles([tile('palv', I.video, 'var(--link)', 'PAL videos'), tile('sync', I.sync, 'var(--good)', 'Sync Center', S.outbox.length), tile('tour', I.tour, 'var(--accent)', 'Feature tour')]);
     return h;
   }
@@ -1562,6 +1615,7 @@ select.inp{appearance:auto}
   function sheetWrap(title, body) { return '<div class="sheet-bg" data-a="closesheet"><div class="sheet" role="dialog" aria-label="' + title + '"><div class="spread"><b style="font-size:16px">' + title + '</b><button class="pill" data-a="closesheet">Close</button></div>' + body + '</div></div>'; }
   function sheet() {
     var s = S.sheet;
+    if (String(s).indexOf('sf') === 0) return sfSheet(s);
     if (s === 'qa') {
       if (S.actEdit) {
         var all = ACTS.slice().sort(function (a, c) { return a.l.localeCompare(c.l); });
@@ -1585,10 +1639,244 @@ select.inp{appearance:auto}
   function askConfirm(title, body, btn, fn) { S.sd.ctitle = title; S.sd.cbody = body; S.sd.cbtn = btn; S.sd.cfn = fn; S.sheet = 'confirm'; }
   function askOtp(what, fn) { S.sd.otpWhat = what; S.sd.otpFn = fn; S.sheet = 'otp'; }
 
+  /* ================= SOCIAL FEED (FSD 001 · SFP Social Feed) ================= */
+  I.social = 'M7 4h10v16H7zM3 6.5h4v11H3M17 6.5h4v11h-4M8.5 15.5l2.5-2.5 2 2 1.5-1.5 1.5 2M10.5 8.5h.01';
+  I.like = 'M7 10v10H4V10zM7 10l4-7a2 2 0 0 1 2.5 2.2L13 9h6a2 2 0 0 1 2 2.3l-1.2 7A2 2 0 0 1 17.8 20H7';
+  I.dots = 'M5 12h.01M12 12h.01M19 12h.01';
+  I.grid = 'M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z';
+  I.detail = 'M4 4h16v10H4zM4 18h10M4 21h6';
+  I.camera = 'M4 8h3l2-3h6l2 3h3v11H4zM12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8z';
+  I.expand = 'M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5';
+  I.reply = 'M10 9L5 13l5 4M5 13h9a5 5 0 0 1 5 5';
+  I.eyeoff = 'M3 3l18 18M10.6 6.1A9.8 9.8 0 0 1 12 6c5 0 9 6 9 6a17 17 0 0 1-3 3.6M6.6 6.6C4.3 8.2 3 12 3 12s4 6 9 6a8.6 8.6 0 0 0 4-1M9.9 9.9a3 3 0 0 0 4.2 4.2';
+  I.flagr = 'M5 21V4h11l-2 4 2 4H5';
+
+  // Roles: FSD seafarer (ship badge) / office staff (building badge)
+  function roleBadge(role, size) { var s = size || 18; return '<span class="sf-role ' + role + '" style="width:' + s + 'px;height:' + s + 'px" role="img" aria-label="' + (role === 'office' ? 'Office staff' : 'Seafarer') + '">' + svg(role === 'office' ? I.building : I.ship, 'currentColor', Math.round(s * 0.62), 2.2) + '</span>'; }
+  function sfAvatar(p, size) { var s = size || 34; return p.me ? '<span class="avatar" style="width:' + s + 'px;height:' + s + 'px;font-size:' + Math.round(s * 0.36) + 'px">RU</span>' : '<span class="sf-av ' + p.role + '" style="width:' + s + 'px;height:' + s + 'px">' + svg(p.role === 'office' ? I.building : I.ship, 'currentColor', Math.round(s * 0.5), 2) + '</span>'; }
+
+  // Built-in sample "photos" (drawn, 1:1) so the standalone file works offline
+  var SCENES = [
+    { sky: ['#5DA9E9', '#BFE3FF'], sea: '#1E6FA8', obj: 'ship', sun: '#FFE08A' },
+    { sky: ['#FF9A6B', '#FFD39B'], sea: '#2B4C7E', obj: 'tanker', sun: '#FFF1B8' },
+    { sky: ['#8EC5FC', '#E0F2FF'], sea: '#3A7CA5', obj: 'cranes', sun: '' },
+    { sky: ['#0B1A3A', '#24396B'], sea: '#0E2A4A', obj: 'stars', sun: '#F4F1C9' },
+    { sky: ['#9AD0EC', '#E8F6FF'], sea: '#1F8A9E', obj: 'coast', sun: '#FFFFFF' },
+    { sky: ['#F6D365', '#FDA085'], sea: '#245A8D', obj: 'crew', sun: '' },
+    { sky: ['#A1C4FD', '#C2E9FB'], sea: '#2E6FA0', obj: 'lighthouse', sun: '#FFF6C9' },
+    { sky: ['#B6E0FE', '#EAF6FF'], sea: '#2774AE', obj: 'containers', sun: '' },
+    { sky: ['#74B9FF', '#DCEEFF'], sea: '#14639A', obj: 'dolphin', sun: '#FFE9A8' },
+    { sky: ['#C9D6FF', '#E2E2E2'], sea: '#456B8F', obj: 'lifeboat', sun: '' },
+    { sky: ['#355C7D', '#C06C84'], sea: '#2A3F5F', obj: 'ship', sun: '#F8B195' },
+    { sky: ['#7BC6CC', '#BEE9E8'], sea: '#1C7C8C', obj: 'bridge', sun: '' }
+  ];
+  function scene(i) {
+    var s = SCENES[i % SCENES.length], id = 'sg' + i, o = '';
+    var hull = function (x, y, w, c) { return '<path d="M' + x + ' ' + y + 'h' + w + 'l-' + (w * 0.1) + ' ' + (w * 0.14) + 'h-' + (w * 0.8) + 'z" fill="' + c + '"/>'; };
+    if (s.obj === 'ship') o = hull(22, 62, 56, '#1C2B40') + '<rect x="58" y="48" width="12" height="14" fill="#F4F6F8"/><rect x="61" y="51" width="6" height="3" fill="#2B4C7E"/><rect x="28" y="54" width="26" height="8" fill="#D7442E"/><rect x="62" y="42" width="3" height="6" fill="#E2231A"/>';
+    if (s.obj === 'tanker') o = hull(14, 63, 72, '#7A1F1F') + '<rect x="16" y="59" width="56" height="4" fill="#A33"/><rect x="70" y="47" width="11" height="16" fill="#F1F1F1"/><path d="M24 59v-5h40v5" stroke="#555" fill="none" stroke-width="1.2"/>';
+    if (s.obj === 'cranes') o = '<rect x="0" y="62" width="100" height="10" fill="#6B7A8F"/>' + [14, 44, 74].map(function (x) { return '<path d="M' + x + ' 62V24h4v38M' + x + ' 26h22M' + (x + 18) + ' 26v14" stroke="#F2B134" stroke-width="2.4" fill="none"/>'; }).join('') + '<rect x="10" y="54" width="14" height="8" fill="#D7442E"/><rect x="26" y="54" width="14" height="8" fill="#2E86DE"/><rect x="60" y="54" width="14" height="8" fill="#10AC84"/>';
+    if (s.obj === 'stars') { for (var k = 0; k < 26; k++) o += '<circle cx="' + ((k * 37) % 100) + '" cy="' + ((k * 23) % 50) + '" r="' + (k % 3 ? .5 : .9) + '" fill="#fff"/>'; o += hull(30, 64, 40, '#0A1222') + '<circle cx="62" cy="58" r="1.2" fill="#FFD166"/><circle cx="40" cy="60" r="1" fill="#FFD166"/>'; }
+    if (s.obj === 'coast') o = '<path d="M0 60 C10 30 30 26 46 40 C58 30 74 34 100 52 V70 H0Z" fill="#2E7D32"/><path d="M0 64 C20 56 40 66 60 60 S90 58 100 62 V70 H0Z" fill="#43A047"/>';
+    if (s.obj === 'crew') o = '<rect x="0" y="60" width="100" height="40" fill="#5A6472"/>' + [30, 62].map(function (x, j) { return '<circle cx="' + x + '" cy="40" r="8" fill="#C99A75"/><path d="M' + (x - 10) + ' 38a10 9 0 0 1 20 0z" fill="' + (j ? '#F7F7F7' : '#F2B134') + '"/><path d="M' + (x - 14) + ' 75v-18a14 10 0 0 1 28 0v18z" fill="#E86A1F"/><path d="M' + (x - 14) + ' 62h28" stroke="#E5F25C" stroke-width="2.5"/>'; }).join('');
+    if (s.obj === 'lighthouse') o = '<path d="M60 70 L64 30 h8 L76 70z" fill="#F4F4F4"/><path d="M61.5 50h13M62.5 40h11" stroke="#E2231A" stroke-width="5"/><rect x="63" y="24" width="10" height="7" fill="#333"/><path d="M73 27 L100 18 V36z" fill="#FFF6C9" opacity=".6"/><path d="M40 70 C50 64 66 64 90 70z" fill="#6D5D4B"/>';
+    if (s.obj === 'containers') { var cs = ['#D7442E', '#2E86DE', '#10AC84', '#F2B134', '#8E44AD', '#E67E22']; for (var r = 0; r < 4; r++) for (var c = 0; c < 6; c++) o += '<rect x="' + (12 + c * 13) + '" y="' + (40 + r * 6) + '" width="12" height="5.4" fill="' + cs[(r + c) % 6] + '"/>'; o += hull(8, 64, 84, '#1C2B40'); }
+    if (s.obj === 'dolphin') o = '<path d="M30 66 C36 50 54 46 66 54 L72 50 L70 58 C62 60 50 60 42 66z" fill="#5D7C99"/><path d="M48 52 l4 -6 2 7z" fill="#5D7C99"/><path d="M56 70 C62 58 76 56 84 62 L88 59 L87 64 C80 66 70 66 64 70z" fill="#6F8FAE"/>';
+    if (s.obj === 'lifeboat') o = '<path d="M20 60 h60 l-6 12 h-48z" fill="#F57C00"/><path d="M24 60 a26 10 0 0 1 52 0z" fill="#FF9800"/><rect x="40" y="52" width="20" height="5" fill="#fff" opacity=".85"/><path d="M30 40 V58 M70 40 V58" stroke="#555" stroke-width="1.5"/>';
+    if (s.obj === 'bridge') o = '<rect x="0" y="0" width="100" height="100" fill="#22303F" opacity=".15"/><rect x="8" y="62" width="84" height="30" fill="#2B3A4C"/><rect x="16" y="66" width="22" height="14" rx="2" fill="#0F2A44"/><path d="M18 76 l6 -4 4 3 6 -6" stroke="#5AA9FF" stroke-width="1.5" fill="none"/><rect x="44" y="66" width="22" height="14" rx="2" fill="#0F2A44"/><circle cx="55" cy="73" r="5" stroke="#3DDC97" fill="none"/><rect x="72" y="68" width="12" height="10" fill="#465A70"/><path d="M0 20 h100 M0 40 h100" stroke="#0E1A27" stroke-width="3"/>';
+    return '<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Photo" style="display:block;width:100%;height:100%"><defs><linearGradient id="' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + s.sky[0] + '"/><stop offset="1" stop-color="' + s.sky[1] + '"/></linearGradient></defs><rect width="100" height="100" fill="url(#' + id + ')"/>' + (s.sun ? '<circle cx="78" cy="22" r="9" fill="' + s.sun + '"/>' : '') + '<rect x="0" y="64" width="100" height="36" fill="' + s.sea + '"/><path d="M0 74 q10 -3 20 0 t20 0 t20 0 t20 0 t20 0" stroke="#fff" stroke-opacity=".35" fill="none"/>' + o + '</svg>';
+  }
+  function photo(p) { return p.src ? '<img src="' + p.src + '" alt="' + esc(p.cap ? p.cap.slice(0, 60) : 'Photo') + '" style="display:block;width:100%;height:100%;object-fit:cover">' : scene(p.sc); }
+
+  var SFU = {
+    rh: { name: 'Robert Henryson', role: 'seafarer', des: 'Master' }, pd: { name: 'Priya Desai', role: 'office', des: 'Group Communications' },
+    jd: { name: 'J. Dela Cruz', role: 'seafarer', des: 'Chief Officer' }, ms: { name: 'Markus Schulz', role: 'office', des: 'HR Marine' },
+    ap: { name: 'A. Pillai', role: 'seafarer', des: 'Bosun' }, ok: { name: 'O. Kovalenko', role: 'seafarer', des: '3rd Officer' },
+    me: { name: 'Rajeev Kumar', role: 'seafarer', des: '2nd Officer', me: true }
+  };
+  function uu(k) { return SFU[k]; }
+  var POSTS = [
+    { id: 'p1', by: 'rh', sc: 0, days: 2, cap: 'Smooth passage through the Malacca Strait this morning. Proud of the bridge team! #BSMfleet #seafarerlife', likes: ['jd', 'ap', 'ok', 'pd', 'ms'], comments: [{ by: 'pd', text: 'Beautiful shot, Captain!', ago: '12 hrs ago', likes: ['rh', 'jd', 'ap'], replies: [{ by: 'rh', text: 'Thank you!', ago: '10 hrs ago', likes: [] }] }, { by: 'jd', text: 'Great watch, everyone 👏', ago: '1 day ago', likes: [], replies: [] }] },
+    { id: 'p2', by: 'ms', sc: 5, days: 3, cap: 'Congratulations to our new safety officers who completed their course at the BSM Training Center this week.', likes: ['rh', 'jd', 'ap', 'ok', 'pd', 'me', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6'], comments: [{ by: 'ap', text: 'Well done team!', ago: '2 days ago', likes: ['ms'], replies: [] }] },
+    { id: 'p3', by: 'jd', sc: 3, days: 5, cap: 'Night watch under the stars, somewhere in the Indian Ocean.', likes: ['rh', 'ok'], comments: [] },
+    { id: 'p4', by: 'pd', sc: 2, days: 9, cap: 'Our new crew welfare lounge in Singapore is open — drop by when you are in port!', likes: ['rh', 'jd', 'ap', 'ok', 'ms', 'x1', 'x2'], comments: [{ by: 'ok', text: 'Looks great, will visit in December.', ago: '1 week ago', likes: [], replies: [] }] },
+    { id: 'p5', by: 'ap', sc: 8, days: 14, cap: 'Dolphins escorting us all morning!', likes: ['rh', 'jd', 'pd', 'ms', 'ok', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9'], comments: [{ by: 'rh', text: 'Lucky crew!', ago: '2 weeks ago', likes: ['ap'], replies: [] }, { by: 'pd', text: 'Love this 🐬', ago: '2 weeks ago', likes: [], replies: [] }, { by: 'jd', text: 'Amazing', ago: '2 weeks ago', likes: [], replies: [] }] },
+    { id: 'p6', by: 'ok', sc: 9, days: 40, cap: 'Lifeboat drill done right. Safety first.', likes: ['rh', 'ms'], comments: [] },
+    { id: 'p7', by: 'me', sc: 4, days: 75, cap: 'Last port view before sign-off from MV Atlantic Pride. Thank you to a great crew!', likes: ['rh', 'jd', 'ap', 'pd'], comments: [{ by: 'jd', text: 'Safe travels home!', ago: '2 months ago', likes: ['me'], replies: [] }] },
+    { id: 'p8', by: 'rh', sc: 6, days: 120, cap: 'Passing the lighthouse at dawn.', likes: ['ap'], comments: [] },
+    { id: 'p9', by: 'me', sc: 1, days: 400, cap: 'Sunset over the tank deck, my first contract as 2nd Officer.', likes: ['rh', 'ok'], comments: [] }
+  ];
+  var GALLERY = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(function (i) { return { sc: i }; });
+  GALLERY.push({ sc: 11, flagged: true });
+  S.sf = { view: 'thumb', sort: 'latest', dl: {}, auto: { data: false, wifi: false }, tc: false, mview: 'thumb', sel: 0, cap: '', err: '', notice: '', reply: null, openReplies: {}, focus: null, liked: {}, cliked: {} };
+  function ageTxt(d) { if (d < 1) return 'Today'; if (d < 7) return d + (d === 1 ? ' day' : ' days') + ' ago'; if (d < 30) { var w = Math.floor(d / 7); return w + (w === 1 ? ' week' : ' weeks') + ' ago'; } if (d < 365) { var m = Math.floor(d / 30); return m + (m === 1 ? ' month' : ' months') + ' ago'; } var y = Math.floor(d / 365); return y + (y === 1 ? ' year' : ' years') + ' ago'; }
+  function nfmt(n) { return n >= 1000 ? (n / 1000).toFixed(1).replace('.0', '') + 'K' : String(n); }
+  function post(id) { return POSTS.filter(function (p) { return p.id === id; })[0]; }
+  function isDl(p) { return p.by === 'me' || S.sf.dl[p.id] || S.sf.auto.data || (S.sf.auto.wifi && !S.offline); }
+  function sortedPosts(mine) {
+    var L = POSTS.filter(function (p) { return mine ? p.by === 'me' : !p.hidden; });
+    if (!mine && S.sf.sort === 'popular') return L.slice().sort(function (a, b) { return (b.likes.length + b.comments.length) - (a.likes.length + a.comments.length); });
+    return L.slice().sort(function (a, b) { return a.days - b.days; });
+  }
+  function sfToolbar(mine) {
+    var v = mine ? S.sf.mview : S.sf.view;
+    return '<div class="sf-bar"><div class="sf-views" role="tablist" aria-label="View"><button role="tab" aria-selected="' + (v === 'thumb') + '" class="' + (v === 'thumb' ? 'on' : '') + '" data-a="sfview" data-v="' + (mine ? 'm:' : '') + 'thumb" aria-label="Thumbnail view">' + svg(I.grid, 'currentColor', 20) + '</button><button role="tab" aria-selected="' + (v === 'detail') + '" class="' + (v === 'detail' ? 'on' : '') + '" data-a="sfview" data-v="' + (mine ? 'm:' : '') + 'detail" aria-label="Detailed view">' + svg(I.detail, 'currentColor', 20) + '</button></div>' + (mine ? '' : '<button class="iconbtn" data-a="open" data-v="myfeed" aria-label="My Feed">' + svg(I.user, 'currentColor', 18) + '</button>') + '<button class="iconbtn" data-a="sfsheet" data-v="opts" aria-label="Social Feed options">' + svg(I.dots, 'currentColor', 20, 3) + '</button></div>';
+  }
+  function thumbGrid(L, mine) {
+    return '<div class="sf-grid">' + L.map(function (p) {
+      var dl = isDl(p);
+      return '<div class="sf-th"><button class="sf-thb" data-a="sfthumb" data-v="' + p.id + '" aria-label="' + (dl ? 'Open photo by ' + esc(uu(p.by).name) : 'Download photo') + '"><span class="sf-img' + (dl ? '' : ' blur') + '">' + photo(p) + '</span>' + (dl ? '' : '<span class="sf-dl">' + svg(I.download, 'currentColor', 20, 2.4) + '</span>') + '<span class="sf-cnt">' + svg(I.like, 'currentColor', 11) + nfmt(p.likes.length) + ' ' + svg(I.chat, 'currentColor', 11) + p.comments.length + '</span></button>' + (mine && dl ? '<button class="sf-mdl" data-a="dl" data-v="Social Feed photo" aria-label="Download to phone">' + svg(I.download, 'currentColor', 13) + '</button>' : '') + '</div>';
+    }).join('') + '</div>';
+  }
+  function postCard(p, mine) {
+    var u = uu(p.by), liked = p.likes.indexOf('me') >= 0, dl = isDl(p);
+    var cap = p.cap.length > 110 && !S.sf['more' + p.id] ? esc(p.cap.slice(0, 110)) + '… <button class="sf-more" data-a="sfmore" data-v="' + p.id + '">more</button>' : esc(p.cap);
+    var h = '<article class="sf-card" id="sf-' + p.id + '"><div class="sf-head">' + sfAvatar(u, 32) + '<span class="sf-name">' + esc(u.name) + '</span>' + roleBadge(u.role, 18) + (p.hidden ? '<span class="label">Hidden</span>' : '') + '<button class="iconbtn sf-dots" data-a="sfsheet" data-v="post:' + p.id + '" aria-label="Post options">' + svg(I.dots, 'currentColor', 20, 3) + '</button></div>';
+    h += '<button class="sf-photo" data-a="' + (dl ? 'noopimg' : 'sfdl') + '" data-v="' + p.id + '" aria-label="' + (dl ? 'Photo' : 'Download photo') + '"><span class="sf-img' + (dl ? '' : ' blur') + '">' + photo(p) + '</span>' + (dl ? '' : '<span class="sf-dl big">' + svg(I.download, 'currentColor', 26, 2.4) + '</span>') + '</button>';
+    h += '<div class="sf-acts"><button class="sf-like' + (liked ? ' on' : '') + '" data-a="sflike" data-v="' + p.id + '" aria-pressed="' + liked + '" aria-label="Like">' + svg(I.like, 'currentColor', 20) + '</button><button class="sf-n" data-a="sfsheet" data-v="likes:' + p.id + '">' + nfmt(p.likes.length) + '</button><button class="sf-like" data-a="sfsheet" data-v="comments:' + p.id + '" aria-label="Comments">' + svg(I.chat, 'currentColor', 20) + '</button><button class="sf-n" data-a="sfsheet" data-v="comments:' + p.id + '">' + p.comments.length + '</button>' + (mine ? '<button class="sf-like" data-a="dl" data-v="Social Feed photo" aria-label="Download to phone">' + svg(I.download, 'currentColor', 20) + '</button>' : '') + '<span class="sf-age">' + ageTxt(p.days) + '</span></div>';
+    h += '<p class="sf-cap">' + cap + '</p>';
+    if (p.comments.length) h += '<button class="sf-vc" data-a="sfsheet" data-v="comments:' + p.id + '">View all ' + p.comments.length + ' comment' + (p.comments.length > 1 ? 's' : '') + '</button>';
+    h += '<button class="sf-add" data-a="sfsheet" data-v="comments:' + p.id + '">' + roleBadge('seafarer', 20) + '<span>Add a comment…</span></button>';
+    return h + '</article>';
+  }
+  function socialOffline() { return '<div class="card col" style="align-items:center;text-align:center;gap:10px;padding:24px"><span class="ti" style="background:var(--ov-2);color:var(--warn)">' + svg(I.social, 'currentColor', 26) + '</span><b>Social Feed needs an internet connection</b><span class="muted small">It is an online feature. Reconnect to see and share photos.</span></div>'; }
+  function social() {
+    if (S.offline) return socialOffline();
+    var h = sfToolbar(false);
+    if (S.sf.notice) h += '<div class="msg" role="status">' + svg(I.alert, 'var(--warn)', 14) + ' ' + esc(S.sf.notice) + '</div>';
+    if (S.sf.view === 'thumb') {
+      h += '<div class="sf-sort" role="tablist"><button role="tab" aria-selected="' + (S.sf.sort === 'latest') + '" class="' + (S.sf.sort === 'latest' ? 'on' : '') + '" data-a="sfsort" data-v="latest">Latest</button><button role="tab" aria-selected="' + (S.sf.sort === 'popular') + '" class="' + (S.sf.sort === 'popular' ? 'on' : '') + '" data-a="sfsort" data-v="popular">Most Popular</button></div>';
+      h += thumbGrid(sortedPosts(false), false);
+    } else h += sortedPosts(false).map(function (p) { return postCard(p, false); }).join('');
+    h += '<span class="muted small" style="text-align:center">Posts, likes and comments are shared with oneHUB Social Feed.</span>';
+    return h + '<button class="sf-fab" data-a="sfnew" aria-label="New post">' + svg(I.plus, 'currentColor', 26, 2.6) + '</button>';
+  }
+  function myfeed() {
+    if (S.offline) return socialOffline();
+    var L = sortedPosts(true);
+    var h = '<div class="sf-me"><span class="avatar" style="width:64px;height:64px;font-size:22px">RU</span><div><b style="font-size:18px;display:block">Rajeev Kumar</b><span class="small" style="opacity:.85">2nd Officer · ' + L.length + ' posts</span></div></div>';
+    h += sfToolbar(true);
+    if (!L.length) return h + '<span class="muted small">You have not posted yet.</span>';
+    return h + (S.sf.mview === 'thumb' ? thumbGrid(L, true) : L.map(function (p) { return postCard(p, true); }).join(''));
+  }
+  function sfnew() {
+    if (S.offline) return socialOffline();
+    var g = GALLERY[S.sf.sel] || GALLERY[0];
+    var h = '<div class="spread"><span class="muted small">Choose one photo · 1:1 · max 10 MB</span><button class="action" data-a="sfnext" style="width:auto;min-height:36px;padding:6px 16px">Next</button></div>';
+    h += '<div class="sf-sel"><span class="sf-img">' + photo(g) + '</span><button class="sf-exp" data-a="sfsheet" data-v="enlarge" aria-label="View enlarged">' + svg(I.expand, 'currentColor', 16) + '</button></div>';
+    if (S.sf.err) h += '<div class="msg" role="alert" style="color:var(--bad)">' + svg(I.alert, 'currentColor', 14) + ' ' + esc(S.sf.err) + '</div>';
+    h += '<div class="spread"><b class="small">My Gallery</b><label class="action ghost" style="width:auto;min-height:34px;padding:6px 10px;cursor:pointer">' + svg(I.docs, 'currentColor', 14) + 'Phone photos<input type="file" data-sf-up="1" accept="image/*" hidden></label></div>';
+    h += '<div class="sf-grid gal">' + GALLERY.map(function (x, i) { return '<button class="sf-th sf-thb' + (i === S.sf.sel ? ' sel' : '') + '" data-a="sfpick" data-v="' + i + '" aria-label="Select photo ' + (i + 1) + (x.flagged ? ' (demo: will be flagged)' : '') + '" aria-pressed="' + (i === S.sf.sel) + '"><span class="sf-img">' + photo(x) + '</span>' + (x.flagged ? '<span class="sf-flag">demo</span>' : '') + (i === S.sf.sel ? '<span class="sf-check">' + svg(I.check, '#fff', 14, 3) + '</span>' : '') + '</button>'; }).join('') + '</div>';
+    return h + '<label class="sf-cam" aria-label="Take a photo with the camera">' + svg(I.camera, 'currentColor', 24) + '<input type="file" data-sf-up="1" accept="image/*" capture="environment" hidden></label>';
+  }
+  function sfcap() {
+    var g = GALLERY[S.sf.sel] || GALLERY[0];
+    var h = '';
+    h += '<div class="sf-sel"><span class="sf-img">' + photo(g) + '</span></div>';
+    h += '<div class="fld"><label for="sf-capin">Caption</label><textarea id="sf-capin" class="ta" maxlength="1500" rows="5" placeholder="Add caption…">' + esc(S.sf.cap) + '</textarea><span class="muted small" id="sf-capn" style="text-align:right">' + S.sf.cap.length + ' / 1500</span></div>';
+    if (S.sf.err) h += '<div class="msg" role="alert" style="color:var(--bad)">' + svg(I.alert, 'currentColor', 14) + ' ' + S.sf.err + '</div>';
+    return h + '<button class="action" data-a="sfpost" style="min-height:48px">Post</button>';
+  }
+  function commentRow(c, pid, path) {
+    var u = uu(c.by), liked = c.likes.indexOf('me') >= 0;
+    var h = '<div class="sf-cm"><span>' + sfAvatar(u, 28) + '</span><div style="flex:1;min-width:0"><div class="small"><b>' + esc(u.name) + '</b> ' + roleBadge(u.role, 14) + ' <span class="muted">· ' + c.ago + '</span></div><div style="font-size:13.5px">' + esc(c.text) + '</div><div class="row small" style="gap:14px;margin-top:4px;color:var(--ink-2)">' + (c.replies ? '<button class="sf-mini" data-a="sfreply" data-v="' + pid + ':' + path + '">' + svg(I.reply, 'currentColor', 14) + ' Reply</button>' + (c.replies.length ? '<button class="sf-mini" data-a="sfreplies" data-v="' + pid + ':' + path + '">' + c.replies.length + ' repl' + (c.replies.length > 1 ? 'ies' : 'y') + '</button>' : '') : '') + '</div></div><div class="col" style="align-items:center;gap:0"><button class="sf-like sm' + (liked ? ' on' : '') + '" data-a="sfclike" data-v="' + pid + ':' + path + '" aria-pressed="' + liked + '" aria-label="Like comment">' + svg(I.like, 'currentColor', 16) + '</button><span class="small muted">' + c.likes.length + '</span></div></div>';
+    if (c.replies && S.sf.openReplies[pid + ':' + path]) h += '<div style="padding-left:34px;display:flex;flex-direction:column;gap:8px">' + c.replies.map(function (r, j) { return commentRow(r, pid, path + '.' + j); }).join('') + '</div>';
+    return h;
+  }
+  function findComment(p, path) { var parts = String(path).split('.'), c = p.comments[+parts[0]]; if (parts.length > 1) c = c.replies[+parts[1]]; return c; }
+  function sfSheet(s) {
+    if (s === 'sftc') return '<div class="sheet-bg"><div class="sheet" role="dialog" aria-label="Social Feed terms and conditions"><div class="row"><span class="ti" style="background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)">' + svg(I.social, 'currentColor', 24) + '</span><b style="font-size:17px">Social Feed · Terms &amp; Conditions</b></div>' + sfTerms() + '<button class="action" data-a="sftcok" style="min-height:48px">I agree</button><button class="back" data-a="sftcno" style="align-self:center">Not now</button></div></div>';
+    if (s === 'sftcview') return sheetWrap('Terms &amp; Conditions', sfTerms());
+    if (s === 'sfopts') return sheetWrap('Social Feed', '<b class="small muted">AUTO DOWNLOAD</b>' + toggle('sfauto', S.sf.auto.data, 'Auto Download Feeds', 'With own data (mobile / VSAT)', I.download).replace('data-a="sfauto"', 'data-a="sfauto" data-v="data"') + toggle('sfauto', S.sf.auto.wifi, 'Auto Download Feeds', 'With Wi-Fi', I.globe).replace('data-a="sfauto"', 'data-a="sfauto" data-v="wifi"') + '<button class="mrow" data-a="sfsheet" data-v="tcview"><span class="mi">' + svg(I.doc, 'currentColor', 18) + '</span><span class="mt"><b>Terms &amp; Conditions</b></span><span class="muted">›</span></button><button class="demo" data-a="sfdemodel">Demo: admin removes one of your posts after a report ›</button>');
+    if (s === 'sfpost') {
+      var p = post(S.sd.sfp), own = p.by === 'me';
+      var rows = own ? [['sfedit', I.edit, 'Edit caption'], ['sfdel', I.trash, 'Delete'], ['sfhide', I.eyeoff, p.hidden ? 'Unhide' : 'Hide'], ['sfreport', I.flagr, 'Report']] : [['sfreport', I.flagr, 'Report']];
+      return sheetWrap('Post options', '<div class="mgroup">' + rows.map(function (r) { return '<button class="mrow" data-a="' + r[0] + '" data-v="' + p.id + '"' + (r[0] === 'sfreport' || r[0] === 'sfdel' ? ' style="color:var(--bad)"' : '') + '><span class="mi">' + svg(r[1], 'currentColor', 18) + '</span><span class="mt"><b>' + r[2] + '</b></span></button>'; }).join('') + '</div>');
+    }
+    if (s === 'sfreport') { var R = ['Inappropriate or offensive', 'Violence', 'Nudity', 'Racist or antisemitic', 'Other violation of the Terms']; return sheetWrap('Report this post', '<span class="small" style="color:var(--ink-3)">The Social Feed admins (Group Communications and HR Marine) will check it against the Terms &amp; Conditions.</span><div class="chips">' + R.map(function (r) { return chip(r, S.sd.sfr === r, 'sfrsn', r); }).join('') + '</div><button class="action" data-a="sfreportok"' + (S.sd.sfr ? '' : ' disabled') + ' style="min-height:48px;background:#C3271E;color:#fff">Report</button>'); }
+    if (s === 'sfedit') { var pe = post(S.sd.sfp); return sheetWrap('Edit caption', '<div class="fld"><label for="sf-edit">Caption</label><textarea id="sf-edit" class="ta" maxlength="1500" rows="5">' + esc(pe.cap) + '</textarea></div><button class="action" data-a="sfeditok" style="min-height:48px">Save</button>'); }
+    if (s === 'sflikes') { var pl = post(S.sd.sfp); return sheetWrap(nfmt(pl.likes.length) + ' likes', '<div class="mgroup">' + pl.likes.map(function (k) { var u = uu(k) || { name: 'BSM colleague', role: k.charCodeAt(1) % 2 ? 'office' : 'seafarer', des: '' }; return '<div class="mrow" style="cursor:default">' + sfAvatar(u, 32) + '<span class="mt"><b>' + esc(u.name) + ' ' + roleBadge(u.role, 14) + '</b><span>' + esc(u.des || (u.role === 'office' ? 'Office staff' : 'Seafarer')) + '</span></span>' + svg(I.like, 'var(--link)', 16) + '</div>'; }).join('') + '</div>'); }
+    if (s === 'sfcomments') {
+      var pc = post(S.sd.sfp);
+      var rep = S.sf.reply ? findComment(pc, S.sf.reply.split(':')[1]) : null;
+      var h = '<div class="sf-cin">' + roleBadge('seafarer', 26) + '<label for="sf-cmt" class="sr">Add a comment</label><input id="sf-cmt" class="inp" placeholder="' + (rep ? 'Reply to ' + esc(uu(rep.by).name) + '…' : 'Add comment…') + '"><button class="iconbtn" data-a="sfsend" data-v="' + pc.id + '" aria-label="Send" style="background:var(--accent);color:var(--on-accent);width:44px;height:44px">' + svg(I.send, 'currentColor', 18) + '</button></div>';
+      if (rep) h += '<button class="back small" data-a="sfreplycancel" style="padding:0">Replying to ' + esc(uu(rep.by).name) + ' · cancel</button>';
+      h += pc.comments.length ? '<div style="display:flex;flex-direction:column;gap:12px">' + pc.comments.map(function (c, i) { return commentRow(c, pc.id, String(i)); }).join('') + '</div>' : '<span class="muted small">No comments yet. Be the first.</span>';
+      return sheetWrap('Comments', h);
+    }
+    if (s === 'sfenlarge') { var ge = GALLERY[S.sf.sel] || GALLERY[0]; return '<div class="sheet-bg" data-a="closesheet" style="justify-content:center;background:rgba(0,0,0,.9)"><div style="padding:16px"><div class="sf-sel" style="border-radius:8px">' + '<span class="sf-img">' + photo(ge) + '</span></div><button class="pill" data-a="closesheet" style="margin:12px auto 0;display:flex">Close</button></div></div>'; }
+    if (s === 'sfreject') return sheetWrap('Can\'t upload this picture', '<div class="msg" role="alert" style="color:var(--bad)">' + svg(I.alert, 'currentColor', 14) + ' The picture you are trying to upload violates the Terms and Conditions of the Social Feed.</div><button class="action ghost" data-a="sfsheet" data-v="tcview">Read the Terms &amp; Conditions</button>');
+    return '';
+  }
+  function sfTerms() { return '<div class="card col" style="background:var(--surface-2);box-shadow:none;max-height:40vh;overflow:auto;font-size:12.5px;color:var(--ink-3);gap:6px"><b style="color:var(--ink)">Using the Social Feed</b><span>1. Share photos that respect your colleagues, the company and the people you meet.</span><span>2. No pictures showing violence, nudity, racist or antisemitic content, or anything that violates democratic values.</span><span>3. Do not share confidential, commercial or security-sensitive information about vessels, cargo or ports.</span><span>4. Ask people before posting photos of them.</span><span>5. Photos are checked automatically before upload. Admins (Group Communications and HR Marine) may remove posts that break these terms; the poster is notified.</span><span>6. Your posts, likes and comments are also visible in oneHUB.</span><span class="muted">Sample terms for the prototype — final text from Group Communications.</span></div>'; }
+  function processUpload(file) {
+    if (!file) return;
+    if (file.size > 10 * 1024 * 1024) { S.sf.err = 'The chosen image is too large to upload. Please select an image under 10 MB'; render(); return; }
+    var fr = new FileReader();
+    fr.onload = function () { var im = new Image(); im.onload = function () { var n = Math.min(im.width, im.height), cv = document.createElement('canvas'); cv.width = cv.height = Math.min(1080, n); cv.getContext('2d').drawImage(im, (im.width - n) / 2, (im.height - n) / 2, n, n, 0, 0, cv.width, cv.height); GALLERY.unshift({ src: cv.toDataURL('image/jpeg', 0.85) }); S.sf.sel = 0; S.sf.err = ''; render(); }; im.src = fr.result; };
+    fr.readAsDataURL(file);
+  }
+  function sfOpen() { if (!S.sf.tc && !S.offline) S.sheet = 'sftc'; }
+  function sfEvent(a, v) {
+    var p, x, parts;
+    switch (a) {
+      case 'sfview': if (v.indexOf('m:') === 0) S.sf.mview = v.slice(2); else S.sf.view = v; return true;
+      case 'sfsort': S.sf.sort = v; return true;
+      case 'sfdl': S.sf.dl[v] = true; return true;
+      case 'sfthumb': p = post(v); if (!isDl(p)) { S.sf.dl[v] = true; return true; } if (cur().v === 'myfeed') S.sf.mview = 'detail'; else S.sf.view = 'detail'; S.sf.focus = v; return true;
+      case 'sflike': p = post(v); x = p.likes.indexOf('me'); if (x >= 0) p.likes.splice(x, 1); else p.likes.unshift('me'); return true;
+      case 'sfmore': S.sf['more' + v] = true; return true;
+      case 'sfsheet':
+        parts = v.split(':');
+        if (parts[0] === 'opts') S.sheet = 'sfopts';
+        if (parts[0] === 'tcview') S.sheet = 'sftcview';
+        if (parts[0] === 'enlarge') S.sheet = 'sfenlarge';
+        if (parts[0] === 'post') { S.sd.sfp = parts[1]; S.sheet = 'sfpost'; }
+        if (parts[0] === 'likes') { S.sd.sfp = parts[1]; S.sheet = 'sflikes'; }
+        if (parts[0] === 'comments') { S.sd.sfp = parts[1]; S.sf.reply = null; S.sheet = 'sfcomments'; }
+        return true;
+      case 'sftcok': S.sf.tc = true; S.sheet = null; return true;
+      case 'sftcno': S.sheet = null; back(); return true;
+      case 'sfauto': S.sf.auto[v] = !S.sf.auto[v]; return true;
+      case 'sfreport': S.sd.sfp = v; S.sd.sfr = null; S.sheet = 'sfreport'; return true;
+      case 'sfrsn': S.sd.sfr = v; return true;
+      case 'sfreportok': S.sheet = null; flash('Reported. The admins will review this post.'); return 'done';
+      case 'sfedit': S.sd.sfp = v; S.sheet = 'sfedit'; return true;
+      case 'sfeditok': post(S.sd.sfp).cap = val('sf-edit').slice(0, 1500); S.sheet = null; flash('Caption updated'); return 'done';
+      case 'sfdel': p = post(v); askConfirm('Delete this post?', 'It is removed from the Social Feed and oneHUB.', 'Delete', function () { POSTS.splice(POSTS.indexOf(p), 1); flash('Post deleted'); }); return true;
+      case 'sfhide': p = post(v); p.hidden = !p.hidden; S.sheet = null; flash(p.hidden ? 'Hidden from the feed · still in My Feed' : 'Visible in the feed again'); return 'done';
+      case 'sfdemodel': x = POSTS.filter(function (q) { return q.by === 'me'; }).pop(); if (x) POSTS.splice(POSTS.indexOf(x), 1); S.sheet = null; S.sf.notice = 'One of your pictures was deleted by the Social Feed admins because it violates the Terms and Conditions.'; flash('Notification: your picture was removed'); return 'done';
+      case 'sfclike': parts = v.split(':'); x = findComment(post(parts[0]), parts[1]); var i2 = x.likes.indexOf('me'); if (i2 >= 0) x.likes.splice(i2, 1); else x.likes.push('me'); return true;
+      case 'sfreply': S.sf.reply = v; S.sd.noKeep = true; return true;
+      case 'sfreplycancel': S.sf.reply = null; return true;
+      case 'sfreplies': S.sf.openReplies[v] = !S.sf.openReplies[v]; return true;
+      case 'sfsend':
+        x = val('sf-cmt'); if (!x) return false; p = post(v);
+        if (S.sf.reply) { var c = findComment(p, S.sf.reply.split(':')[1].split('.')[0]); c.replies.push({ by: 'me', text: x, ago: 'Just now', likes: [] }); S.sf.openReplies[S.sf.reply.split(':')[0] + ':' + S.sf.reply.split(':')[1].split('.')[0]] = true; S.sf.reply = null; }
+        else p.comments.push({ by: 'me', text: x, ago: 'Just now', likes: [], replies: [] });
+        var el = document.getElementById('sf-cmt'); if (el) el.value = ''; return true;
+      case 'sfnew': S.sf.sel = 0; S.sf.cap = ''; S.sf.err = ''; go('sfnew'); return true;
+      case 'sfpick': S.sf.sel = +v; S.sf.err = ''; return true;
+      case 'sfnext': S.sf.err = ''; go('sfcap'); return true;
+      case 'sfpost':
+        S.sf.cap = val('sf-capin').slice(0, 1500); var g = GALLERY[S.sf.sel];
+        if (g.flagged) { S.sheet = 'sfreject'; return true; }
+        POSTS.unshift({ id: 'p' + Date.now(), by: 'me', sc: g.sc, src: g.src, days: 0, cap: S.sf.cap, likes: [], comments: [] });
+        S.stack = S.stack.filter(function (s) { return s.v !== 'sfnew' && s.v !== 'sfcap'; }); S.sf.view = 'thumb'; S.sf.sort = 'latest';
+        flash('Posted to the Social Feed'); return 'done';
+      case 'noopimg': return false;
+    }
+    return null;
+  }
+
   /* ================= Render ================= */
   var ROUTES = { home: home, voyage: voyage, training: training, menu: menu, profile: profile, 'profile-edit': profileEdit, approvals: approvals, nor: nor, family: family, security: security, appearance: appearance, payslips: payslips, allotments: allotments, benes: benes, claims: claims, 'claim-new': claimNew, docs: docs, downloads: downloads, news: news, feedback: feedback, jobs: jobs, connect: connect, palv: palv, medical: medical, wellbeing: wellbeing, offers: offers, fx: fxView, sync: sync, tour: tour, settings: settings, fleet: fleet, wbdash: wbdash, cms: cms, personal: personal };
   var PROUTES = { payslip: payslip, 'family-edit': familyEdit, 'allot-edit': allotEdit, 'bene-edit': beneEdit, claim: claimView, doc: docView, article: article, fbform: fbForm, course: courseView, sign: signView, offer: offerView, app: appView, cert: certView, thread: thread, vessel: vesselDetail, cmsitem: cmsItem };
   var TITLES = { profile: 'Profile', 'profile-edit': 'Edit contact details', approvals: 'Change requests', 'profile-edit': 'Edit details', nor: 'Notice of Readiness', family: 'Family members', 'family-edit': 'Family member', security: 'Security & password', appearance: 'Appearance', payslips: 'Payslips', payslip: 'Payslip', allotments: 'Allotments', 'allot-edit': 'Allotment', benes: 'Beneficiaries', 'bene-edit': 'Beneficiary', claims: 'Expense claims', claim: 'Expense claim', 'claim-new': 'New claim', docs: 'My Documents', doc: 'Document', downloads: 'Downloads', news: 'News', article: 'News', feedback: 'Feedback', fbform: 'Feedback', jobs: 'Jobs', connect: 'SeaConnect', palv: 'PAL videos', medical: 'Medical', course: 'Course', sign: 'Signing board', wellbeing: 'Wellbeing', offers: 'Offers', offer: 'Offer letter', app: 'Application', cert: 'Certificate', thread: 'Chat', fx: 'Currency', sync: 'Sync Center', tour: 'Feature tour', settings: 'Settings', personal: 'Personal details', fleet: 'Vessel Tracker', vessel: 'Vessel', wbdash: 'Shore view', cms: 'CMS', cmsitem: 'CMS', training: 'Training' };
+  ROUTES.social = social; ROUTES.myfeed = myfeed; ROUTES.sfnew = sfnew; ROUTES.sfcap = sfcap;
+  TITLES.social = 'Social Feed'; TITLES.myfeed = 'My Feed'; TITLES.sfnew = 'New Post'; TITLES.sfcap = 'New Post';
+  ACTS.push({ id: 'social', l: 'Social Feed', ic: I.social, c: 'var(--accent)', v: 'social' });
+  TOUR.push(['Social Feed (FSD 001)', [['Social Feed icon in Menu › Community (and in Actions › Edit)', 'menu'], ['Thumbnail view · 3 per row · Latest / Most Popular', 'open:social'], ['Detailed view, like, likes list, comments & replies', 'open:social'], ['Download per image · auto-download options · Terms', 'open:social'], ['Post options: edit, delete, hide, report', 'open:myfeed'], ['New post: gallery, camera, 1:1, 10 MB, caption 1500', 'open:sfnew'], ['My Feed with seafarer / office staff icons', 'open:myfeed']]]);
   var TABN = { home: 'Home', news: 'News', voyage: 'Voyage', menu: 'Menu' };
   function subbar(c) {
     var prev = S.stack.length > 1 ? (TITLES[S.stack[S.stack.length - 2].v] || 'Back') : TABN[S.tab];
@@ -1624,10 +1912,13 @@ select.inp{appearance:auto}
     Object.keys(kept).forEach(function (id) { var f = document.getElementById(id); if (f) f.value = kept[id]; });
     var b = root.querySelector('.body'); if (b) b.scrollTop = same ? keep : 0;
     if (c.v === 'sign') initSig();
+    if (S.sf && S.sf.focus) { var fe = document.getElementById('sf-' + S.sf.focus); if (fe && b) b.scrollTop = fe.offsetTop - 60; S.sf.focus = null; }
     if (S.sheet === 'otp') { var o = document.getElementById('otp'); if (o) o.focus(); }
   }
 
   /* ================= Events ================= */
+  root.addEventListener('change', function (e) { if (e.target.getAttribute && e.target.getAttribute('data-sf-up')) processUpload(e.target.files && e.target.files[0]); });
+  root.addEventListener('input', function (e) { if (e.target.id === 'sf-capin') { S.sf.cap = e.target.value; var n = document.getElementById('sf-capn'); if (n) n.textContent = e.target.value.length + ' / 1500'; } });
   root.addEventListener('input', function (e) {
     var id = e.target.id;
     if (id === 'pw1' || id === 'pw2') { var r = document.getElementById('pwrules'); if (r) r.innerHTML = pwRules(val('pw1'), val('pw2')); var b = document.getElementById('pwbtn'); if (b) b.disabled = !S.pwOk; }
@@ -1642,6 +1933,7 @@ select.inp{appearance:auto}
     if (a === 'closesheet' && el.classList.contains('sheet-bg') && e.target !== el) return;
     if (el.disabled) return;
     var parts, x;
+    if (a.indexOf('sf') === 0 || a === 'noopimg') { var sr = sfEvent(a, v); if (sr === true) render(); return; }
     switch (a) {
       case 'tab': tab(v); break;
       case 'home': tab('home'); break;
@@ -1658,7 +1950,7 @@ select.inp{appearance:auto}
         if (parts[0] === 'cmsitem') S.sd.cms = {};
         if (parts[0] === 'claim-new') { S.claimAtt = []; S.claimCat = 'medical'; }
         if (parts[0] === 'nor') S.sd.norPick = null;
-        go(parts[0], parts.length > 1 ? parts.slice(1).join(':') : null); break;
+        go(parts[0], parts.length > 1 ? parts.slice(1).join(':') : null); if (parts[0] === 'social') sfOpen(); break;
       case 'voyseg': tab('voyage'); S.voySeg = v; break;
       case 'trseg': S.trSeg = v; if (cur().v !== 'training') go('training'); break;
       case 'fold': S.open[v] = !S.open[v]; saveOpen(); break;
